@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Météo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Weather App</title>
 </head>
+
 <body>
-    <script src="/js/meteo.js"></script>
+  <div class="container">
+    <div class="card">
+      <p class="ville">Bordeaux</p>
+      <p class="weather">Soleil</p>
+      <img src="https://png.pngtree.com/png-vector/20221128/ourmid/pngtree-icon-of-sun-png-image_6484830.png" alt="icon">
+      <p class="temp"> 20°C</p>
+      <div class="windHumidity">
+        <div class="wind">
+          <p class="windHeading">Vent</p>
+          <p class="windValue">10 km/h</p>
+        </div>
+        <div class="humidity">
+          <p class="humidityHeading">Humidité</p>
+          <p class="humidityValue">20%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/meteo.js"></script>
 </body>
+
 </html>
