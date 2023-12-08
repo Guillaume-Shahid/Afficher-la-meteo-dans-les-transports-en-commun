@@ -1,90 +1,86 @@
 html {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #212121;
-    color: white;
+  background-color: #323232;
+  color: #FFF;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
-    position: relative;
-    width: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
-    background-color: rgba(65, 65, 65, 0.308);
-    border: 1px solid rgba(255, 255, 255, 0.089);
-    box-sizing: border-box;
-    padding: 20px;
-    gap: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(40px);
+  background-color: rgba(65, 65, 65, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 10px;
+}
+
+.card > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2px;
 }
 
 .city {
-    font-weight: 700;
-    font-size: 0.9em;
-    letter-spacing: 1.2px;
-    color: white;
+  align-self: center;
+  font-size: 1.3em;
+  margin-bottom: 2px;
 }
 
-.weather {
-    font-weight: 500;
-    font-size: 0.7em;
-    letter-spacing: 1.2px;
-    color: rgb(197, 197, 197);
+.weather, .temp {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1px 0;
 }
 
-.temp {
-    font-size: 1.8em;
-    color: white;
+#icon {
+  width: 80px;
+  height: auto;
+  margin: 1px 0;
 }
 
 .windHumidity {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .wind,
-  .humidity {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0px 20px;
-    gap: 4px;
-  }
-  
-  .humidity {
-    align-items: flex-start;
-    border-left: 2px solid white;
-  }
-  
-  .humidityHeading,
-  .windHeading {
-    font-size: 0.7em;
-    font-weight: 600;
-    color: white;
-  }
-  
-  .humidityValue,
-  .windValue {
-    font-size: 0.6em;
-    font-weight: 500;
-    color: rgb(197, 197, 197);
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.wind,
+.humidity {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.humidity {
+  align-items: flex-start;
+  margin-left: 25px;
+  border-left: 2px solid #FFF;
+  padding-left: 10px;
+}
+
+.lastUpdate {
+  font-size: 0.7em;
+  color: #BDBDBD;
+  align-self: center;
+  margin-top: 10px;
+}
