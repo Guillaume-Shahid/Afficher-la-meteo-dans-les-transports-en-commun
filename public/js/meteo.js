@@ -8,7 +8,7 @@ function fetchWeatherData() {
             document.getElementById('icon').src = data.current.condition.icon;
             document.getElementById('humidity').textContent = data.current.humidity + '%';
             document.getElementById('windkm').textContent = data.current.wind_kph + 'km/h';
-            document.getElementById('hour').textContent = 'last update : ' + new Date().toLocaleTimeString();
+            document.getElementById('hour').textContent = 'Dernière mise à jour : ' + new Date().toLocaleTimeString();
         })
         .catch(error => {
             console.error('Erreur:', error);
