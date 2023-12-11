@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 
 const config = require('./conf.json');
-const apiKey = config.apiKey;
 const city = config.city;
+
+const apiKey = process.env.apiKey;
 
 app.use(express.static('public'));
 
@@ -30,6 +31,6 @@ app.get('/weather', (req, res) => {
         });
 });
 
-app.listen(5010, function () {
-    console.log('Server is running on port 5010');
+app.listen(5011, function () {
+    console.log('Server is running on port 5011');
 });
