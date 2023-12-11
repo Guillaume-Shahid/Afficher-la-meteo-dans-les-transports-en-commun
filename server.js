@@ -31,6 +31,6 @@ app.get('/weather', (req, res) => {
         });
 });
 
-app.listen(5011, function () {
-    console.log('Server is running on port 5011');
+app.listen(process.env.PORT || 5011, function () {
+    console.log('Server is running');
 });
