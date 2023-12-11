@@ -6,8 +6,13 @@ const app = express();
 
 const city = process.env.CITY;
 const apiKey = process.env.API_KEY;
+const path = require('path');
 
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
 
 app.get('/weather', (req, res) => {
     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no&lang=fr`;
