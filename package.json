@@ -4,8 +4,9 @@
   "description": "Afficher la météo dans les transports en",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Guillaume-Shahid/Afficher-la-meteo-dans-les-transports-en-commun.git"
