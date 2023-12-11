@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const fetch = require('node-fetch');
 const app = express();
 
 const city = process.env.CITY;
@@ -11,8 +12,7 @@ app.use(express.static('public'));
 app.get('/weather', (req, res) => {
     const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no&lang=fr`;
 
-    import('node-fetch')
-        .then(({ default: fetch }) => fetch(url))
+    fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur lors de la récupération des données météo');
