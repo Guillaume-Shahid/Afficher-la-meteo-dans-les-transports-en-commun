@@ -1,10 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
-const config = require('./conf.json');
-const city = config.city;
-
-const apiKey = process.env.apiKey;
+const city = process.env.CITY;
+const apiKey = process.env.API_KEY;
 
 app.use(express.static('public'));
 
