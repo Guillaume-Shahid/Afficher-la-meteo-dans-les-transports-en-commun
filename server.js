@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
+const path = require('path');
 
 const city = process.env.CITY;
 const apiKey = process.env.API_KEY;
